@@ -1,0 +1,17 @@
+{
+  "name": "mysatellite",
+  "version": "1.0.0",
+  "description": "A desktop app",
+  "license": "MIT",
+  "author": {
+    "name": "5hanazar",
+    "email": "shanazar1dev@gmail.com"
+  },
+  "main": "./dist/main/main.js",
+  "scripts": {
+    "rebuild": "node -r ts-node/register ../../.erb/scripts/electron-rebuild.js",
+    "postinstall": "npm run rebuild && npm run link-modules",
+    "link-modules": "node -r ts-node/register ../../.erb/scripts/link-modules.ts"
+  },
+  "dependencies": {}
+}

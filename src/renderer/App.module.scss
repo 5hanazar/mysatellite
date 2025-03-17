@@ -1,0 +1,84 @@
+@font-face {
+	font-family: RobotoMono;
+	src: url('/assets/robotomono.ttf');
+}
+body {
+	margin: 0;
+	background-color: #000;
+	font-family: Calibri;
+}
+.container > section {
+	position: absolute;
+	margin: 16px;
+	background: linear-gradient(
+		#00ffff50,
+		#00ffff50 3px,
+		#00ffff30 3px,
+		#00ffff30 9px
+	);
+	background-size: 100% 9px;
+	animation: pan-overlay 1s linear infinite;
+	backdrop-filter: blur(4px) brightness(80%);
+	//clip-path: polygon(350px 0, 100% 10px, 100% 200px, 360px 100%, 20px 100%, 0 180px, 0 0);
+	//clip-path: polygon(350px 0, 100% 10px, 100% 180px, 340px 100%, 0 100%, 0 200px, 0 0);
+	clip-path: polygon(370px 0, 100% 10px, 100% 170px, 380px 100%, 0 100%, 0 170px, 0 0);
+	border-top: 10px solid cyan;
+	box-sizing: border-box;
+	padding: 16px;
+	width: 380px;
+	height: 170px;
+	color: cyan;
+	user-select: none;
+	font-family: RobotoMono;
+	display: flex;
+	flex-direction: row;
+	gap: .5rem;
+	> div:first-child {
+		text-align: end;
+	}
+	> button {
+		display: block;
+		background: none;
+		border: none;
+		outline: none;
+		align-self: start;
+		color: inherit;
+		font-family: inherit;
+		font-size: inherit;
+		padding: 0;
+		border-bottom: 2px solid cyan;
+		cursor: pointer;
+	}
+}
+@keyframes pan-overlay {
+	from {
+		background-position: 0% 0%;
+	}
+	to {
+		background-position: 0% 9px;
+	}
+}
+.container > button {
+	display: flex;
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	align-items: center;
+	margin: 8px;
+	outline: none;
+	border: none;
+	background: none;
+	cursor: pointer;
+	padding: 0;
+	color: #ccc;
+	font-family: inherit;
+	font-size: 14px;
+	user-select: none;
+	gap: 4px;
+	& > svg {
+		width: 16px;
+	}
+	&:hover {
+		color: #dfdfdf;
+	}
+}
