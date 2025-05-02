@@ -18,8 +18,8 @@ npm install
 Create a .env file in the root directory and provide the credentials:
 
 ```bash
-N2YO_KEY = your_n2yo_api_key
-NORAD_ID = satellite_norad_id
+n2yo_key = your_n2yo_api_key
+norad_id = satellite_norad_id
 ```
 
 ## Starting Development
